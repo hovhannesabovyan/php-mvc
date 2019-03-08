@@ -4,13 +4,20 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6e849fd91289bc4010264c033666125c
+class ComposerStaticInit0dabf51485c17910d99e5a88c66a2ed6
 {
+    public static $files = array (
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'i' => 
+        array (
+            'ishop\\' => 6,
+        ),
         'a' => 
         array (
             'app\\' => 4,
-            'above\\' => 6,
         ),
         'R' => 
         array (
@@ -19,13 +26,13 @@ class ComposerStaticInit6e849fd91289bc4010264c033666125c
     );
 
     public static $prefixDirsPsr4 = array (
+        'ishop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ishop/core',
+        ),
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
-        ),
-        'above\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/above/core',
         ),
         'RedBeanPHP\\' => 
         array (
@@ -33,11 +40,22 @@ class ComposerStaticInit6e849fd91289bc4010264c033666125c
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'V' => 
+        array (
+            'Valitron' => 
+            array (
+                0 => __DIR__ . '/..' . '/vlucas/valitron/src',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6e849fd91289bc4010264c033666125c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6e849fd91289bc4010264c033666125c::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0dabf51485c17910d99e5a88c66a2ed6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0dabf51485c17910d99e5a88c66a2ed6::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0dabf51485c17910d99e5a88c66a2ed6::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
